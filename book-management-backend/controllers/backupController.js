@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
-const Book = require('../models/Book'); // Adjust if model name is different
+const Book = require('../models/Book'); 
 
-// Backup controller
+
 const backupDatabase = async (req, res) => {
   try {
     const books = await Book.find();
@@ -14,7 +14,7 @@ const backupDatabase = async (req, res) => {
   }
 };
 
-// Restore controller
+
 const restoreDatabase = async (req, res) => {
   try {
     const backupPath = path.join(__dirname, '../backup/books.json');
